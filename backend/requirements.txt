@@ -1,9 +1,15 @@
 fastapi
 uvicorn
-python-multipart
+numpy
+opencv-python
+pillow
 deepface
 ultralytics
-librosa
-bark
-ffmpeg-python
 audiocraft
+scipy
+asyncio
+jsonschema
+python-multipart
+torch==2.0.1+cu118  # Adjust based on CUDA version
+torchvision==0.15.2+cu118  # Adjust based on CUDA version
+torchaudio==2.0.2+cu118  # Adjust based on CUDA version
