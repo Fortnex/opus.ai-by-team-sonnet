@@ -6,3 +6,4 @@ ultralytics
 librosa
 bark
 ffmpeg-python
+audiocraft
