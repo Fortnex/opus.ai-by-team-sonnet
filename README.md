@@ -8,7 +8,7 @@ Installation
   
 2. Set up the backend:
   cd backend  
-  python -m venv venv  
+  python3.9 -m venv venv  
   venv\Scripts\activate  
   pip install -r requirements.txt  
 
