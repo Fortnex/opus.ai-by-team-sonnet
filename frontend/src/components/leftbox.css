@@ -1,0 +1,96 @@
+/* Updated Card Styling */
+.card {
+  position: relative;
+  width: 90%; /* Increased width for a better fit */
+  max-width: 450px; /* Prevents it from being too large on bigger screens */
+  height: auto;
+  background-color: #000; /* Solid black for content */
+  color: white;
+  padding: 30px; /* Increased padding */
+  border-radius: 16px; /* Slightly rounded corners */
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 40px;
+}
+
+/* Adjust Font for Better Readability */
+.card .heading {
+  font-size: 1.8rem; /* Bigger heading */
+  font-weight: bold;
+  font-family: "Poppins", sans-serif; /* Modern & clean font */
+}
+
+.card p {
+  font-size: 1.2rem; /* Increased font size */
+  font-family: "Roboto", sans-serif; /* Smooth readability */
+  line-height: 1.6; /* Spacing for better readability */
+  margin-top: 10px;
+}
+
+/* Animated Gradient Border */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(-45deg, #e81cff, #40c9ff, #fc00ff, #00dbde);
+  background-size: 300% 300%;
+  border-radius: 20px;
+  z-index: -2;
+  transition: transform 0.5s ease-in-out;
+  animation: gradientMove 4s linear infinite;
+}
+
+/* Outer Glow Effect */
+.card::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  background: linear-gradient(-45deg, #e81cff, #40c9ff, #fc00ff, #00dbde);
+  background-size: 300% 300%;
+  border-radius: 24px;
+  z-index: -3;
+  filter: blur(25px);
+  animation: gradientMove 4s linear infinite;
+}
+
+/* Ensure Content Stays Above */
+.card img,
+.card .heading,
+.card p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover Effects */
+.card:hover::before {
+  transform: rotate(-5deg) scale(1.05); /* Slight tilt effect */
+}
+
+.card:hover::after {
+  filter: blur(35px);
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

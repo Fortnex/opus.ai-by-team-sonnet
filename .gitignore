@@ -1,0 +1,30 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Node.js
+node_modules/
+dist/
+*.log
+
+# Environment files
+.env
+.env.local
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Large files
+*.mp4
+*.wav
+*.mp3

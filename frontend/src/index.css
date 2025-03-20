@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🔥 Full-Screen Animated Background */
+.animation-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(150deg, #2a0a4d, #0e1c45); /* Dark blue-purple */
+  overflow: hidden;
+}
+
+/* ✨ Floating Animated Boxes */
+.box-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 12s linear infinite;
+  bottom: -150px;
+  border-radius: 50%;
+}
+
+.box-area li:nth-child(1) { left: 80%; width: 80px; height: 80px; animation-delay: 0s; animation-duration: 10s; }
+.box-area li:nth-child(2) { left: 20%; width: 40px; height: 40px; animation-delay: 1s; animation-duration: 8s; }
+.box-area li:nth-child(3) { left: 60%; width: 100px; height: 100px; animation-delay: 3s; animation-duration: 9s; }
+.box-area li:nth-child(4) { left: 40%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 7s; }
+.box-area li:nth-child(5) { left: 10%; width: 30px; height: 30px; animation-delay: 2s; animation-duration: 6s; }
+.box-area li:nth-child(6) { left: 50%; width: 110px; height: 110px; animation-delay: 1.5s; animation-duration: 8s; }
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* ✅ Fix Header Alignment */
+header {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(135deg, #550a8a, #3d0853);
+  text-align: center;
+  padding: 15px 0;
+  width: 100vw;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* ✅ Keep Content Visible Above Background */
+.upload-box {
+  position: fixed;
+  z-index: 10;
+}
+
+/* 🟣 RightBox Styling (Inspired by Uiverse) */
+.container {
+  height: 400px;
+  width: 750px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🚀 Drag & Drop Zone */
+.header {
+  width: 100%;
+  border: 2px dashed white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.header svg {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+/* ✅ File Selection Section */
+.footer {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.footer svg {
+  width: 30px;
+  height: 30px;
+}
+
+.footer p {
+  flex-grow: 1;
+  text-align: center;
+  color: whitesmoke;
+}
+
+/* 🟠 Upload Button */
+.upload-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: darkblue;
+}
+
+/* ✅ Download Link */
+.download-link {
+  margin-top: 10px;
+  color: royalblue;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ✅ RightBox Animated Background */
+.right-box-animation {
+  position: relative;
+  width: 750px;
+  border-radius: 12px;
+  height: 100%;
+  background: linear-gradient(150deg, #00bcd4, #ffb6c1); /* Aqua to Soft Pink */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* 🌌 Floating Circles Animation */
+.right-box-animation .floating-circle {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.3); /* Soft white for contrast */
+  animation: floatAnimation 8s linear infinite;
+  bottom: -100px;
+  border-radius: 50%;
+}
+
+.right-box-animation .floating-circle:nth-child(1) {
+  left: 10%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 6s;
+}
+
+.right-box-animation .floating-circle:nth-child(2) {
+  left: 40%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 7s;
+}
+
+.right-box-animation .floating-circle:nth-child(3) {
+  left: 70%;
+  width: 80px;
+  height: 80px;
+  animation-duration: 9s;
+}
+
+.right-box-animation .floating-circle:nth-child(4) {
+  left: 25%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 5s;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-600px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* 🌟 New Fixes for Alignment, Hover & Sizing */
+.md\:w-1\/2 {
+  width: 45% !important;
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+#file-upload + label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#file-upload + label:hover {
+  background-color: #f3f4f6;
+}
+
+button {
+  margin-top: 20px;
+  width: 80%;
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+.progress-status {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+}
